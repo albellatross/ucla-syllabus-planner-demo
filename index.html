@@ -855,8 +855,17 @@ fn fs_main(in : VertexOutput) -> @location(0) vec4<f32> {
 ._topicCard_mtwhd_7 ._kindLabel_mtwhd_29[data-sensitive]{background:var(--gnrc-color-background-warning-soft);color:var(--gnrc-color-foreground-warning-primary);}
 ._topicCard_mtwhd_7 ._courseCode_mtwhd_28{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:right;font-size:var(--gnrc-font-size-functional-body-medium);line-height:var(--gnrc-line-height-functional-body-medium);color:var(--gnrc-color-foreground-neutral-secondary);}
 ._topicCard_mtwhd_7:has(._topicLink_mtwhd_32):hover{background:var(--gnrc-color-background-neutral-transparent-hover);}
-._topicCard_mtwhd_7:is(:hover,:focus-within) .syllabus-exam-countdown{margin-right:var(--gnrc-spacing-component-base-600);}
+
 @media(forced-colors:active){._topicCard_mtwhd_7 .syllabus-exam-countdown,._topicCard_mtwhd_7 ._kindLabel_mtwhd_29{border:1px solid CanvasText;background:Canvas;color:CanvasText;}}
 @media(prefers-reduced-motion:reduce){._topicCard_mtwhd_7{transition:none;}}
+</style><style>
+/* The overflow slot exists at rest; revealing its button only changes opacity. */
+._topicCard_mtwhd_7 ._cardTop_mtwhd_77{display:grid;grid-template-columns:minmax(0,1fr) max-content 24px;column-gap:var(--gnrc-spacing-component-base-100);align-items:center;}
+._topicCard_mtwhd_7 ._cardTop_mtwhd_77 ._sourceTiming_mtwhd_21{grid-column:1;grid-row:1;}
+._topicCard_mtwhd_7 ._cardTop_mtwhd_77 .syllabus-exam-countdown{grid-column:2;grid-row:1;margin:0;}
+._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>div{grid-column:3;grid-row:1;position:static;inset:auto;width:24px;min-width:24px;height:24px;margin:0;opacity:0;transition:opacity 100ms ease;}
+._topicCard_mtwhd_7:is(:hover,:focus-within) ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7:is(:hover,:focus-within) ._cardTop_mtwhd_77>div,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button[aria-expanded="true"],._topicCard_mtwhd_7 ._cardTop_mtwhd_77>div:has(:popover-open){opacity:1;}
+@media(hover:none){._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>div{opacity:1;}}
+@media(prefers-reduced-motion:reduce){._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>div{transition:none;}}
 </style></body>
 </html>
