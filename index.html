@@ -860,13 +860,15 @@ fn fs_main(in : VertexOutput) -> @location(0) vec4<f32> {
 @media(forced-colors:active){._topicCard_mtwhd_7 .syllabus-exam-countdown,._topicCard_mtwhd_7 ._kindLabel_mtwhd_29{border:1px solid CanvasText;background:Canvas;color:CanvasText;}}
 @media(prefers-reduced-motion:reduce){._topicCard_mtwhd_7{transition:none;}}
 </style><style>
-/* The overflow slot exists at rest; revealing its button only changes opacity. */
-._topicCard_mtwhd_7 ._cardTop_mtwhd_77{display:grid;grid-template-columns:minmax(0,1fr) max-content 24px;column-gap:var(--gnrc-spacing-component-base-100);align-items:center;}
+/* Only the trigger is positioned; never constrain the menu surface. */
+._topicCard_mtwhd_7 ._cardTop_mtwhd_77{position:relative;display:grid;grid-template-columns:minmax(0,1fr) max-content;column-gap:var(--gnrc-spacing-component-base-100);align-items:center;}
 ._topicCard_mtwhd_7 ._cardTop_mtwhd_77 ._sourceTiming_mtwhd_21{grid-column:1;grid-row:1;}
-._topicCard_mtwhd_7 ._cardTop_mtwhd_77 .syllabus-exam-countdown{grid-column:2;grid-row:1;margin:0;}
-._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>div{grid-column:3;grid-row:1;position:static;inset:auto;width:24px;min-width:24px;height:24px;margin:0;opacity:0;transition:opacity 100ms ease;}
-._topicCard_mtwhd_7:is(:hover,:focus-within) ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7:is(:hover,:focus-within) ._cardTop_mtwhd_77>div,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button[aria-expanded="true"],._topicCard_mtwhd_7 ._cardTop_mtwhd_77>div:has(:popover-open){opacity:1;}
-@media(hover:none){._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>div{opacity:1;}}
-@media(prefers-reduced-motion:reduce){._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>div{transition:none;}}
+._topicCard_mtwhd_7 ._cardTop_mtwhd_77 .syllabus-exam-countdown{grid-column:2;grid-row:1;margin:0;transition:opacity 100ms ease;}
+._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button[aria-haspopup]{position:absolute;inset:auto;right:0;top:-2px;width:24px;min-width:24px;height:24px;margin:0;opacity:0;pointer-events:none;transition:opacity 100ms ease;}
+._topicCard_mtwhd_7:hover ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button:focus-visible,._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button[aria-expanded="true"]{opacity:1;pointer-events:auto;}
+._topicCard_mtwhd_7:hover .syllabus-exam-countdown,._topicCard_mtwhd_7:has(._cardTop_mtwhd_77>button:focus-visible) .syllabus-exam-countdown,._topicCard_mtwhd_7:has(._cardTop_mtwhd_77>button[aria-expanded="true"]) .syllabus-exam-countdown{opacity:0;pointer-events:none;}
+._topicCard_mtwhd_7 ._cardTop_mtwhd_77>div{position:fixed;inset:auto;width:max-content;min-width:0;height:auto;opacity:1;}
+@media(hover:none){._topicCard_mtwhd_7 ._cardTop_mtwhd_77{padding-right:28px;}._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button{opacity:1;pointer-events:auto;}._topicCard_mtwhd_7 .syllabus-exam-countdown{opacity:1!important;}}
+@media(prefers-reduced-motion:reduce){._topicCard_mtwhd_7 ._cardTop_mtwhd_77>button,._topicCard_mtwhd_7 .syllabus-exam-countdown{transition:none;}}
 </style></body>
 </html>
